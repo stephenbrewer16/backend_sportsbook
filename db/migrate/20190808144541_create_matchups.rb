@@ -1,6 +1,7 @@
 class CreateMatchups < ActiveRecord::Migration[5.2]
   def change
     create_table :matchups do |t|
+      t.string :sport
       t.string :away_team
       t.string :home_team
       t.integer :away_spread_odds

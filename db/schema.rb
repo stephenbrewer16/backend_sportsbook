@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2019_08_08_144803) do
   enable_extension "plpgsql"
 
   create_table "matchups", force: :cascade do |t|
+    t.string "sport"
     t.string "away_team"
     t.string "home_team"
     t.integer "away_spread_odds"

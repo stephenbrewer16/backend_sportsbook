@@ -27,4 +27,12 @@ class UsersController < ApplicationController
 
         render json: user
     end
+
+    def place_bet
+        user = User.find(params[:id])
+        byebug
+        user.update(wallet: (user.wallet - params[:bet]))
+
+        render json: user
+    end
 end

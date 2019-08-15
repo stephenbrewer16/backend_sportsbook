@@ -12,9 +12,16 @@ class WagersController < ApplicationController
     end
 
     def create
-        wager = Wager.new(team: params[:team], selected_wager: params[:selected_wager], odds: params[:odds], wager_amount: params[:wager_amount], user_id: params[:user_id], matchup_id: params[:matchup_id])
+        wager = Wager.new(team: params[:team], selected_wager: params[:selected_wager], odds: params[:odds], wager_amount: params[:wager_amount], status: params[:status], user_id: params[:user_id], matchup_id: params[:matchup_id])
         if wager.save
             render json: wager
         end
+    end
+
+    def update
+        wager = Wager.find(params[:id])
+        wager.update(status: params[:status])
+
+        render json: wager
     end
 end

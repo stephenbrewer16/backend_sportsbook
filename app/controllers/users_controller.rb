@@ -34,4 +34,11 @@ class UsersController < ApplicationController
 
         render json: user
     end
+
+    def win_bet
+        user = User.find(params[:id])
+        user.update(wallet: (user.wallet + params[:win]))
+
+        render json: user
+    end
 end

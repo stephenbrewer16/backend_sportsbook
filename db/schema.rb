@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2019_08_08_144803) do
 
   create_table "matchups", force: :cascade do |t|
     t.string "sport"
-    t.string "away_team"
-    t.string "home_team"
+    t.string "away_team_name"
+    t.string "home_team_name"
     t.integer "away_spread_odds"
     t.integer "home_spread_odds"
     t.float "away_points_spread"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2019_08_08_144803) do
     t.float "under"
     t.integer "over_odds"
     t.integer "under_odds"
+    t.integer "away_score"
+    t.integer "home_score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -46,6 +48,7 @@ ActiveRecord::Schema.define(version: 2019_08_08_144803) do
     t.float "selected_wager"
     t.integer "odds"
     t.float "wager_amount"
+    t.string "status"
     t.bigint "user_id"
     t.bigint "matchup_id"
     t.datetime "created_at", null: false

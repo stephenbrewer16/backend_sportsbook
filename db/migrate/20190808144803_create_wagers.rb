@@ -5,6 +5,7 @@ class CreateWagers < ActiveRecord::Migration[5.2]
       t.float :selected_wager
       t.integer :odds
       t.float :wager_amount
+      t.string :status
       t.references :user, foreign_key: true
       t.references :matchup, foreign_key: true
 

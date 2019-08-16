@@ -24,7 +24,8 @@ class UsersController < ApplicationController
     def update
         user = User.find(params[:id])
         user.update(wallet: (user.wallet + params[:wallet]))
-
+        wager = Wager.find(params[:wager_id])
+        wager.update(status: "Payout Completed")
         render json: user
     end
 

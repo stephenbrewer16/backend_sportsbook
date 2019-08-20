@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   resources :matchups
   resources :wagers
   patch "/users/:id/bet", to: "users#place_bet"
+  patch "/users/:id/add_funds", to: "users#add_funds"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -36,9 +36,9 @@ class UsersController < ApplicationController
         render json: user
     end
 
-    def win_bet
+    def add_funds
         user = User.find(params[:id])
-        user.update(wallet: (user.wallet + params[:win]))
+        user.update(wallet: (user.wallet + params[:wallet]))
 
         render json: user
     end

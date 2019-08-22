@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create(username: "Stephen", password: "123", email: "chicken", wallet: 100.00)
+User.create(username: "Stephen", password: "123", email: "stephenbrewer@aol.com", wallet: 100.00)
 Matchup.create(sport: "Baseball", away_team_name:"Yankees",  home_team_name:"Athletics", away_spread_odds: -164, home_spread_odds: +144, away_points_spread: +1.5, home_points_spread: -1.5, over: +10.5, under: -10.5, over_odds: +350, under_odds: -350, away_score: 4, home_score: 6)
 Matchup.create(sport: "Baseball", away_team_name:"Padres",  home_team_name:"Reds", away_spread_odds: -145, home_spread_odds: +125, away_points_spread: +1.5, home_points_spread: -1.5, over: +8.5, under: -8.5, over_odds: -150, under_odds: -150, away_score: 2, home_score: 4)
 Matchup.create(sport: "Baseball", away_team_name:"White Sox",  home_team_name:"Twins", away_spread_odds: -125, home_spread_odds: +105, away_points_spread: +1.5, home_points_spread: -1.5, over: +9.5, under: -9.5, over_odds: +200, under_odds: -200, away_score: 4, home_score: 0)

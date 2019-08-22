@@ -12,10 +12,10 @@ class UsersController < ApplicationController
     end
 
     def create
-        user = User.new(username: params[:username], password: params[:password], email: params[:email], wallet: params[:wallet], avatar: params[:avatar])
+        user = User.new(username: params[:username], password: params[:password], email: params[:email], wallet: params[:wallet])
         if user.save
         token = encode_token(user.id)
-        render json: {user: user, token: token}
+        render json: {user: UserSerializer.new(user), token: token}
         else 
         render json: {errors: user.errors.full_messages}
         end
